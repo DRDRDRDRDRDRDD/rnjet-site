@@ -279,17 +279,20 @@
                         продукта. Для точного подбора заполните <a href="opros.html"
                             style="color:#C43030;text-decoration:underline">опросный лист</a>.</p>
                 </div>
-                <form class="card" method="post" action="send.php" style="gap:16px">
+                <form class="card" action="https://formspree.io/f/mgaondqv" method="POST" style="gap:16px">
                     <label class="in">Имя<input type="text" name="name" required autocomplete="name"
                             placeholder="Как к вам обращаться"></label>
                     <label class="in">Компания<input type="text" name="company" autocomplete="organization"
                             placeholder="Название"></label>
-                    <label class="in">Телефон или e-mail<input type="text" name="contact" required
+                    <label class="in">Телефон или e-mail<input type="email" name="email" required
                             placeholder="Как с вами связаться"></label>
                     <label class="in">Что маркируете<textarea name="message" rows="3"
                             placeholder="Материал, скорость линии, что печатаем"></textarea></label>
+
+                    <!-- Скрытое поле для защиты от спама (Honeypot) -->
                     <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"
                         style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
                     <label
                         style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#4A5668;line-height:1.5"><input
                             type="checkbox" name="consent" value="1" required
